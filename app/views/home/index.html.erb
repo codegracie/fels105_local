@@ -1,10 +1,39 @@
 <% if logged_in? %>
+
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <%= t ".panel_title" %>
+      <%= t ".panel_title" %> <%= current_user.full_name %>
     </div>
     <div class="panel-body">
       <div class="row">
+        <div class="col-md-4">
+            <div class="box box-widget widget-user-2">
+                <div class="widget-user-header bg-grey">
+                  <div class="widget-user-image">
+                    <img class="img-circle">
+                      <%= link_to image_tag(current_user.avatar, size: "150x150"), current_user %>
+                    </img>
+                 
+                    <!--img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar"> -->
+                  </div>
+                  <h3 class="widget-user-username"><%= current_user.full_name %></h3>
+                  <h5 class="widget-user-desc">Rockstar</h5>
+                </div>
+                <div class="box-footer no-padding">
+                    <ul class="nav nav-stacked">
+                    
+                    <li><a><%= render "shared/status" %> <span class="pull-right badge bg-blue"></span></a></li>
+
+
+                    <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
+                    <li><a href="#">Completed Projects <span class="pull-right badge bg-green">12</span></a></li>
+                    <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
         <div class="col-md-4">
           <div class="row user-profile">
             <%= link_to image_tag(current_user.avatar, size: "150x150"), current_user %>
