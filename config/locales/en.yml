@@ -51,7 +51,7 @@ en:
       button_faq: Frequently Asked Questions
   home:
     index:
-      panel_title: Welcome
+      panel_title: Welcome back
       sample_output: Learned 200 words
       button_words: Words
       button_lessons: Lessons
@@ -146,8 +146,8 @@ en:
       submit: Sign in
   shared:
     status:
-      followers: followers
-      following: following
+      followers: Followers
+      following: Following
       total_words: Words Learned
     follow:
       follow: Follow
