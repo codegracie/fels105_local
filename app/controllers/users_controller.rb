@@ -5,8 +5,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user_set_types = {"Everyone": "1","Friends only": "2","Only me": "3"}
+    @categories = Category.all
     @user = User.find params[:id]
-    @activities = @user.activities.paginate page: params[:page], per_page: 15
+    @user_set = @user.user_sets.build
+    @user_sets = @user.user_sets
   end
 
   def new

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       resources :relationships, only: [:index, :create, :destroy]
     end
   end
+  resources :user_sets
   resources :categories
   resources :lessons
   resources :lesson_words

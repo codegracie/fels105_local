@@ -5,6 +5,7 @@ class Lesson < ActiveRecord::Base
   has_many :lesson_words
   belongs_to :user
   belongs_to :category
+  belongs_to :user_set
 
   accepts_nested_attributes_for :lesson_words, allow_destroy: true
 

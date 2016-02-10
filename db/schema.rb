@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202081535) do
+ActiveRecord::Schema.define(version: 20160210060416) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "log_id",        limit: 4
@@ -73,6 +73,17 @@ ActiveRecord::Schema.define(version: 20160202081535) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
 
+  create_table "user_sets", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "category_id", limit: 4
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "set_type",    limit: 255
+    t.boolean  "recommended"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",        limit: 255
     t.string   "last_name",         limit: 255
@@ -96,6 +107,7 @@ ActiveRecord::Schema.define(version: 20160202081535) do
     t.string   "content",     limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "user_set_id", limit: 4
   end
 
   add_index "words", ["category_id"], name: "index_words_on_category_id", using: :btree
