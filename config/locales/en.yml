@@ -51,11 +51,12 @@ en:
       button_faq: Frequently Asked Questions
   home:
     index:
-      panel_title: Welcome
+      panel_title: Welcome back
       sample_output: Learned 200 words
       button_words: Words
       button_lessons: Lessons
       activities: Activities
+      activities_text: Your network feeds are shown below.
     signup:
       signup_welcome: Welcome to Framgia eLearning System
       signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
@@ -139,13 +140,15 @@ en:
       check_email: Check your email for the activation link.
       invalid: Invalid email/password combination
     new:
+      header: Learn Anytime, Anywhere
+      content: Make your breaks and commutes more productive.<br/> Get to learn new languages at your own pace.<br/>Connect with native-speaking language learners just like you.
       title: Sign in now
       remember: Remember me on this computer
       submit: Sign in
   shared:
     status:
-      followers: followers
-      following: following
+      followers: Followers
+      following: Following
       total_words: Words Learned
     follow:
       follow: Follow

@@ -1,7 +1,7 @@
 <% if logged_in? %>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <%= t ".panel_title" %>
+      <%= t ".panel_title" %> <%= current_user.full_name %>
     </div>
     <div class="panel-body">
       <div class="row">
