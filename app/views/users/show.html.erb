@@ -1,0 +1,42 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row user-profile">
+          <%= link_to image_tag(@user.avatar, size: "150x150"), @user %>
+        </div>
+        <div class="row user-profile">
+          <%= @user.full_name %>
+        </div>
+        <div class="row user-profile">
+          <%= render "shared/status" %>
+          <%= render "shared/follow_form" %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <%= link_to t(".button_words"), words_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to t(".button_lessons"), categories_path, class: "btn btn-primary btn-lg" %>
+        </div>
+        <div class="row">
+          <h3><%= t ".activities" %></h3>
+          <ul>
+            <% @activities.each do |activity| %>
+              <li>
+                <%= link_to image_tag(activity.log.avatar, size: "50x50"), activity.log %>
+                <%= link_to activity.log.full_name, activity.log %>
+                <div class="activity-content">
+                  <%= activity.content %>
+                </div>
+              </li>
+              <hr>
+              <%= will_paginate @activities %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
