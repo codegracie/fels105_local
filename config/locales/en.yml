@@ -201,6 +201,7 @@ en:
         name: Full name
         email: Email Address
         admin: Admin?
+        totalusers: Total 
       show:
         title: Users
         name: Full Name
@@ -212,6 +213,8 @@ en:
       index:
         title: Listing Categories
         no_items_found: "SEARCH RESULT: THERE ARE NO CATEGORY ITEMS FOUND."
+        date: Today is 
+        totalcategories: Total 
       show: 
         title: Category
         name: Category Name
